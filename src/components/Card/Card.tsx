@@ -3,7 +3,9 @@ import {
   ChakraProvider,
   Input,
   Box,
-  Button
+  Button,
+  Flex,
+  Heading
 } from '@chakra-ui/react';
 import { login } from '../../services/login';
 
@@ -17,19 +19,22 @@ interface ICard {
 export const Card = () => {
   return(
     <ChakraProvider>
-    <Box minHeight='100vh' backgroundColor='#9413dc' padding='25px'>
-      <Box backgroundColor='#FFFFFF' borderRadius='25px' padding='15px' >
+      <Box minHeight='90vh' backgroundColor='purple.700' padding='25px'>
+        <Center marginTop="45px">
+        <Box backgroundColor='gray.100' borderRadius='25px' padding='15px' minWidth="40vw" minHeight="35vh" >
         <Center>
-          <h1>Faça o login</h1>
+          <Heading color="purple.800">Faça o login</Heading>
         </Center>
-        <Input placeholder="email" />
-        <Input placeholder="password" />
+        <Input placeholder="email" marginTop="40px" variant='flushed'/>
+        <Input placeholder="password" type="password" marginTop="10px" variant='flushed'/>
         <Center>
-          <Button onClick={login} colorScheme='teal' size='sm' width='100%' marginTop='5px'>
-            Button
+          <Button onClick={login} colorScheme='purple' size='lg' width='100%' marginTop='40px'>
+            Login
           </Button>
+            </Center>
+            
+        </Box>
         </Center>
-      </Box>
     </Box>
   </ChakraProvider>
   )

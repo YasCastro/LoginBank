@@ -1,9 +1,16 @@
-import './Header.css'
-import { Box, Flex, Heading } from '@chakra-ui/react'
-
+import { Box, Button, ChakraProvider, Flex, Heading } from "@chakra-ui/react"
 
 export const Header  = () => {
   return(
-    <Flex></Flex>
+    <ChakraProvider> 
+      <Box bg="purple.300" color="white" p={2}>
+      <Flex justify="space-between" align="center">
+        <Heading size="md">DIO Bank</Heading>
+        <Box>
+          <Button colorScheme="whiteAlpha">Sign Up</Button>
+        </Box>  
+      </Flex>
+    </Box>
+   </ChakraProvider>
   )
 }
