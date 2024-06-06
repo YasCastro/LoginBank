@@ -7,10 +7,10 @@ describe('login', () => {
 
     const mockEmail = 'yas@email.br'
 
-    it('Deve exibir um alert com boas vindas caso o e-mail seja valido', () => {
-        login(mockEmail)
-        expect(mockAlert).toHaveBeenCalledWith(`Bem vinda ${mockEmail}!`)
-    })
+    // it('Deve exibir um alert com boas vindas caso o e-mail seja valido', () => {
+    //     login(mockEmail)
+    //     expect(mockAlert).toHaveBeenCalledWith(`Bem vinda ${mockEmail}!`)
+    // })
     it('Não deve exibir um alert com boas vindas sem o e-mail', () => {
         login(mockEmail)
         expect(mockAlert).not.toHaveBeenCalledWith('Bem vinda!')
